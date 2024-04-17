@@ -35,6 +35,7 @@ const defaultPort = 1050;
 
 // Get port from command-line argument or use default port
 const port = process.argv[2] || defaultPort;
+//const port = process.env.PORT || defaultPort;
 
 // Start the server
 app.listen(port, () => {
