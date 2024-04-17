@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy to DEV') {
             steps {
                 script{
-                    deploy("DEV")
+                    deploy("DEV", 50556)
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy to STG') {
             steps {
                 script{
-                    deploy("STG")
+                    deploy("STG", 50558)
                 }
             }
         }
@@ -40,7 +40,7 @@ pipeline {
         stage('Deploy to PRD') {
             steps {
                 script{
-                    deploy("PRD")
+                    deploy("PRD", 50557)
                 }
             }
         }
