@@ -57,10 +57,10 @@ pipeline {
 
 def build(){
         echo 'Building of node aplication is starting ...'
-        bat "npm -v"
-        bat "npm install"
         bat "ls"
-        
+        bat "npm -v"
+        bat "npm install --package-lock-only"
+        bat "npm install"
 }
 
 def deploy(String enviroment, int port){
