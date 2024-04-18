@@ -30,7 +30,7 @@ jobs:
       - name: ... tests success ...
         run: echo ... tests success ...
 
-  deploy:
+  deploy-dev:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
