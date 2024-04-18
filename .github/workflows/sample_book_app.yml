@@ -1,0 +1,47 @@
+
+name: CI Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: ... build success ...
+        run: echo ... build success ...
+
+      - name: ... check node version ...
+        run: node -v 
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: ... tests success ...
+        run: echo ... tests success ...
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: ... deploy success ...
+        run: echo ... deploy success ...
+
+  cleanUp:
+    name: Clean up
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: ... clean up success ...
+        run: echo ... clean up success ...
