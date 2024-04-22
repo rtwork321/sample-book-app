@@ -22,6 +22,11 @@ jobs:
       - name: ... check node version ...
         run: node -v 
 
+      - name: ... check node and npm versions ...
+        run: |
+          node -v
+          npm -v
+
   deploy-dev:
     name: Deploy DEV
     runs-on: ubuntu-latest
