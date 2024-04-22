@@ -57,7 +57,7 @@ pipeline {
 
 def build(){
         echo 'Building of node aplication is starting ...'
-        bat "ls"
+        //bat "ls"
         bat "npm -v"
         bat "npm install --package-lock-only"
         bat "npm install"
