@@ -2,9 +2,9 @@ runs:
   using: "composite"
   steps:
     - name: ... build success ...
-      run: Building of node aplication is starting ...
+      run: echo Building of node aplication is starting ...
       shell: bash
-      
+
     - name: Install dependencies
       run: npm install
       shell: bash
