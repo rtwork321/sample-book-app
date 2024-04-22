@@ -13,17 +13,17 @@ runs:
       run: echo Deployment to ${{inputs.enviroment}} has started ...
       shell: bash
 
-    - name: Install dependencies
-      run: npm install
-      shell: bash
+    # - name: Install dependencies
+    #   run: npm install
+    #   shell: bash
 
     - name: Install pm2
       run: sudo npm install -g pm2
       shell: bash
 
-    # - name: Delete services
-    #   run: pm2 delete ${{inputs.enviroment}}
-    #   shell: bash
+    - name: Delete services
+      run: pm2 delete ${{inputs.enviroment}}
+      shell: bash
 
     - name: Start services
       run: pm2 start -n ${{inputs.enviroment}} index.js -- $ {{inputs.port}}

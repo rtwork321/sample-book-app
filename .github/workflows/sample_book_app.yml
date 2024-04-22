@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
 
   deploy-dev:
     name: Deploy DEV
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [build]
 
     steps:
@@ -45,7 +45,7 @@ jobs:
 
   tests-dev:
     name: Tests DEV
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [deploy-dev]
 
     steps:
@@ -57,7 +57,7 @@ jobs:
 
   deploy-stg:
     name: Deploy STG
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [tests-dev]
 
     steps:
@@ -77,7 +77,7 @@ jobs:
 
   deploy-prd:
     name: Deploy PRD
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [tests-stg]
 
     steps:
