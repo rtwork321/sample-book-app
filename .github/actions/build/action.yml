@@ -4,6 +4,7 @@ runs:
     - name: ... build success ...
       run: Building of node aplication is starting ...
       shell: bash
+      
     - name: Install dependencies
       run: npm install
       shell: bash
