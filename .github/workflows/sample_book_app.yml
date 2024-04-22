@@ -37,10 +37,12 @@ jobs:
     needs: [build]
 
     steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
+        with:
+          port: 2345
+          enviroment: 'DEV'
 
-      - name: ... deploy success ...
-        run: echo Deployment to DEV has started ...
-  
   tests-dev:
     name: Tests DEV
     runs-on: ubuntu-latest
